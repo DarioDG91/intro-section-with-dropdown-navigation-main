@@ -45,6 +45,7 @@ button {
 a {
     text-decoration: none;
     color: var(--Medium-Gray);
+    transition: font-weight 200ms;
 }
 
 a:hover {
@@ -226,6 +227,7 @@ h1 {
     font-size: 1.15625rem;
     font-weight: 700;
     border-radius: 0.9rem;
+    transition: background-color 250ms, color 250ms;
 }
 
 .main-text a:hover {
@@ -249,9 +251,6 @@ h1 {
     background-repeat: no-repeat;
 }
 
-.main-text .footer {
-
-}
 
 .footer-img {
     height: 26px;
@@ -289,11 +288,14 @@ h1 {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgb(0, 0, 0, 0.7);
+    transition: background-color 300ms, opacity 300ms;
 }
 
 #dark-background.active {
     display: initial;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.7;
+
 }
 
 #sidebar {
@@ -301,7 +303,6 @@ h1 {
     background-color: white;
     overflow-y: scroll;
     overscroll-behavior: contain;
-    display: none;
     height: 100vh;
     width: max(15rem, 25vw);
     position: fixed;
@@ -309,10 +310,12 @@ h1 {
     top: 0;
     bottom: 0;
     z-index: 4;
+    translate: 250px;
+    transition: translate 500ms ;
 }
 
 #sidebar.opened {
-   display: initial;
+   translate: 0;
 }
 
 #nav-btn.opened {
